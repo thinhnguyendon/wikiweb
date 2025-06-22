@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings of Glory Wikia</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/mobileview.css"/>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="main-background">
+        <img src="/assets-img/background3.png" alt="background-behind" class="backgroundpic">
+
+    </div>
+
+        <section id="Mainpage">
+
+        <div class="top-header">
+            <img src="/assets-img/gamelogo.png" alt="{gamelogo" class="logoimg">
+            <h1 class="wingsofglory"> WINGS OF GLORY Wikia</h1>
+        </div>
+
+        <div class="page-actions">
+        <button onclick="window.location.href='/form.html'">➕ Create Nation</button>
+        <button onclick="window.location.href='/aircraftpage.html'">✈️ Create Aircraft</button>
+        <button onclick="promptEdit()">✏️ Edit Page</button>
+        <button onclick="promptDelete()">❌ Delete Page</button>
+        </div>
+
+
+        <div class="navbar">
+      <ul class="navlinks">
+        <li class="nationdrop">
+            <a href="#">Nations</a>
+        <ul class="dropdown-nations">
+            <li><a href="/pages/usa">USA</a></li>
+            <li><a href="#">UK</a></li>
+            <li><a href="#">France</a></li>
+            <li><a href="#">Russia/USSR</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">Japan</a></li>
+            <li><a href="#">Special</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Aircrafts</a></li>
+      </ul>
+        </div>
+
+    </section>
+
+    <div class="content">
+        <h1 class="welcome-line">WELCOME TO FANMADE WIKIA OF WINGS OF GLORY</h1>
+
+        <p class="introduction">This is a fanmade wikia page for the roblox game,
+             Wings of Glory.
+            The game is an arcade air combat simulation with over 130
+            aircrafts from early WWII planes to nowadays modern jets.
+        </p>
+
+        <h2 class="nations-header">Nations</h2>
+        <hr class="full-line">
+        <p class="nation-intro">
+            There are total 6 nations in the game currently. Each of 
+            them has uniquie aircrafts and armaments contribute to 
+            each nation's military doctrine. There is also separated
+            Special and Event tree for aircrafts from other nations.
+            
+        </p>
+
+        <ul class="nation-flags">
+            <li><a href="/pages/usa">USA</a>
+            <img src="/usa/usaflag.png" class="usaflag"></li>
+            <li><a href="#">UK</a>
+            <img src="/uk/ukflag.png" class="ukflag"></li>
+            <li><a href="#">France</a>
+            <img src="/france/franceflag.png" class="franceflag"></li>
+            <li><a href="#">Russia/USSR</a>
+            <img src="/russia/russiaflag.png" class="russiaflag"></li>
+            <li><a href="#">Germany</a>
+            <img src="/germany/germanyflag.png" class="germanyflag"></li>
+            <li><a href="#">Japan</a>
+            <img src="/japan/japan.png" class="japanflag"></li>
+            <li><a href="#">Special</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+
+        
+
+        <h2 class="disclaim">Disclaimer</h2>
+        <hr class="full-line">
+        <p class="discalimer-note">
+            The Wings of Glory Fanmade Wikia is created for informing,
+            education, and testing purposes. It is highly recommended
+            to visit the offical fandom wikia of the game:
+            <a class="officialwoglink" href="https://wings-of-glory.fandom.com/wiki/Wings_of_Glory_Wiki">Official Wiki of Wings of Glory</a>
+        </p>
+
+    </div>
+    
+    <script>
+function promptEdit() {
+  const slug = prompt("Enter the page slug to edit (e.g. 'usa'):");
+  if (slug) {
+    window.location.href = `/edit.html?slug=${slug}`;
+  }
+}
+
+async function promptDelete() {
+  const slug = prompt("Enter the page slug to delete (e.g. 'usa'):");
+  if (slug && confirm(`Are you sure you want to delete "${slug}"?`)) {
+    const res = await fetch(`/delete/${slug}`);
+    if (res.ok) {
+      alert("Page deleted.");
+      location.reload();
+    } else {
+      alert("Failed to delete page.");
+    }
+  }
+}
+</script>
+
+</body>
+</html>

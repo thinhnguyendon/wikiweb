@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings of Glory Wikia</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/mobileview.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="main-background">
+        <img src="/assets-img/background3.png" alt="background-behind" class="backgroundpic">
+
+    </div>
+
+    <header id="main-header">
+        <section id="Mainpage">
+
+        <div class="top-header">
+            <img src="/assets-img/gamelogo.png" alt="gamelogo" class="logoimg">
+            <h1 class="wingsofglory"> WINGS OF GLORY Wikia</h1>
+        </div>
+
+        <div class="navbar">
+      <ul class="navlinks">
+        <li class="nationdrop">
+            <a href="#">Nations</a>
+        <ul class="dropdown-nations">
+            <li><a href="/pages/usa">USA</a></li>
+            <li><a href="#">UK</a></li>
+            <li><a href="#">France</a></li>
+            <li><a href="#">Russia/USSR</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">Japan</a></li>
+            <li><a href="#">Special</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Aircrafts</a></li>
+      </ul>
+        </div>
+
+    </section>
+
+    <div class="content">
+  <h2 class="createnewpage">Create New Page</h2>
+
+  <form method="post" action="/pages">
+    <input type="text" name="title" placeholder="Enter Page Title" required><br><br>
+
+    <h3 class="form">About</h3>
+    <textarea name="about" rows="6" placeholder="Enter About section..." required></textarea><br><br>
+
+    <h3 class="form">Tech Tree</h3>
+    <textarea name="techtree" rows="6" placeholder="Enter Tech Tree..." required></textarea><br><br>
+
+    <button type="submit">Create Page</button>
+  </form>
+
+  <br><a class="backtohome" href="/">← Back to Home</a>
+</div>
+
+
+    </div>
+    </header>
+    
+    
+</body>
+</html>

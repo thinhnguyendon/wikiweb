@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "json5": "^2.2.3",
+    "multer": "^2.0.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "gamewikinew",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
